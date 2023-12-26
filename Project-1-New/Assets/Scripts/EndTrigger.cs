@@ -9,7 +9,8 @@ public class EndTrigger : MonoBehaviour
 
     private void OnTriggerEnter()
     {
-       gameManager.CompleteLevel();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //gameManager.CompleteLevel();
     }
 
 
