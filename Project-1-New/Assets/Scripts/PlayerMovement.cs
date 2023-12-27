@@ -7,13 +7,17 @@ using UnityEditor.Experimental.GraphView;
 public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rigidbody;
-    public float forwardForce ;
+    public float forwardForce = 2000f;
     public float sidewaysForce = 500f;
     public float maxSlopeAngle;
     private RaycastHit slopeHit;
     public float playerHeight;
     Vector3 moveDirection;
     public Transform orientation;
+
+    public float moveX;
+    private Touch touch;
+
     public void FixedUpdate()
     {
         rigidbody.AddForce(0, 0, forwardForce * Time.deltaTime);
@@ -21,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
         bool moveRight = Input.GetKey("d");
         bool moveLeft = Input.GetKey("a");
         bool space = Input.GetKey(KeyCode.Space);
+
+        rigidbody.AddForce(sidewaysForce * moveX * Time.deltaTime, 0, 0, ForceMode.Force);
 
         if (moveRight)
         {

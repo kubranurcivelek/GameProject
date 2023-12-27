@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.5342606, g: 0.8328697, b: 0.9652148, a: 1}
+  m_IndirectSpecularColor: {r: 0.5341959, g: 0.8324974, b: 0.9651683, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1694,6 +1694,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   end: {x: 0, y: 0, z: 0}
+--- !u!1 &236856614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9007841160846842910, guid: b1b30ab2d598c0a4384bce0ce0458d00, type: 3}
+  m_PrefabInstance: {fileID: 4240525802902332482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &244406760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8df224d6fc6d1724180ee5fafe684085, type: 3}
@@ -8361,6 +8366,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7041847136397525866, guid: b1b30ab2d598c0a4384bce0ce0458d00, type: 3}
   m_PrefabInstance: {fileID: 4240525802902332482}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1160999831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236856614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f02c8fde7eb9bbf4abd037e8f0799bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1172999813 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8df224d6fc6d1724180ee5fafe684085, type: 3}
@@ -15774,6 +15791,10 @@ PrefabInstance:
       value: 0.575
       objectReference: {fileID: 0}
     - target: {fileID: 5930777866791479567, guid: b1b30ab2d598c0a4384bce0ce0458d00, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930777866791479567, guid: b1b30ab2d598c0a4384bce0ce0458d00, type: 3}
       propertyPath: m_jumpForce
       value: 20
       objectReference: {fileID: 0}
@@ -15847,7 +15868,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7041847136397525866, guid: b1b30ab2d598c0a4384bce0ce0458d00, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1028028788}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 9007841160846842910, guid: b1b30ab2d598c0a4384bce0ce0458d00, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1160999831}
   m_SourcePrefab: {fileID: 100100000, guid: b1b30ab2d598c0a4384bce0ce0458d00, type: 3}
 --- !u!1001 &4270304356059932402
 PrefabInstance:
