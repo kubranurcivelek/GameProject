@@ -192,7 +192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &345781485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1233936735}
         m_TargetAssemblyTypeName: AdvertisementManager, Assembly-CSharp
         m_MethodName: LoadInterstitialAd
         m_Mode: 1
@@ -295,7 +295,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345781484}
   m_LocalRotation: {x: 0.13052616, y: -0, z: -0, w: 0.9914449}
-  m_LocalPosition: {x: 0, y: 0, z: -67.218895}
+  m_LocalPosition: {x: 0, y: 0, z: 640.3938}
   m_LocalScale: {x: 0.19245, y: 0.19245, z: 0.19245}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -304,7 +304,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120}
+  m_AnchoredPosition: {x: 0, y: 669.9695}
   m_SizeDelta: {x: 950.4503, y: 178.2095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &661512160
@@ -1141,6 +1141,7 @@ GameObject:
   - component: {fileID: 2032628918}
   - component: {fileID: 2032628917}
   - component: {fileID: 2032628916}
+  - component: {fileID: 2032628919}
   - component: {fileID: 2032628915}
   m_Layer: 5
   m_Name: ShowButton
@@ -1193,6 +1194,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1233936735}
+        m_TargetAssemblyTypeName: AdvertisementManager, Assembly-CSharp
+        m_MethodName: ShowInterstitialAd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 98898185}
         m_TargetAssemblyTypeName: LevelComplate, Assembly-CSharp
         m_MethodName: LoadNextLevel
@@ -1264,6 +1277,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -42}
   m_SizeDelta: {x: 1139.1478, y: 355.04}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2032628919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032628914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aece701c18f8c0d4f971b2ba18ceb532, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
