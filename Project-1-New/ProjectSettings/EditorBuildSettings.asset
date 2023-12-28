@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Level07.unity
     guid: f879c9722c9c2004e919b20a31965abb
   - enabled: 1
-    path: Assets/Scenes/Level04.unity
+    path: Assets/Scenes/Level07.unity
     guid: f879c9722c9c2004e919b20a31965abb
   - enabled: 1
     path: Assets/Scenes/Credits.unity
