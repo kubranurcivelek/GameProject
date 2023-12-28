@@ -31,7 +31,7 @@ public class TouchScreen : MonoBehaviour
             if (touch.phase == TouchPhase.Moved)
             {
 
-                moveX = touch.deltaPosition.x;
+                moveX = touch.deltaPosition.x / Screen.width;
             }
             else
             {
