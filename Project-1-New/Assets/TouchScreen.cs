@@ -5,54 +5,61 @@ using UnityEngine;
 public class TouchScreen : MonoBehaviour
 {
 
-    Rigidbody rigi;
+    public Rigidbody rb;
 
-    bool left;
-    bool right;
-    float speed = 5.0f;
-    float jump = 50.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float forwardForce = 5000f;
+    public float sidewaysForce = 500f;
+
+    [Space]
+    public float moveX;
+
+    private Touch touch;
+
+
+
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, speed * Time.deltaTime);
-
-        Vector3 go_right = new Vector3(5.50f, transform.position.y, transform.position.z);
-        Vector3 go_left = new Vector3(-5.50f, transform.position.y, transform.position.z);
-
         if (Input.touchCount > 0)
         {
-            Touch finger = Input.GetTouch(0);
-           
-            if(finger.deltaPosition.x > 5.0f)
+
+            touch = Input.GetTouch(0);
+
+
+            if (touch.phase == TouchPhase.Moved)
             {
-                right = true;
-                left = false;
+
+                moveX = touch.deltaPosition.x;
             }
-            if (finger.deltaPosition.x < -5.0f)
+            else
             {
-                right = false;
-                left = true;
-            }
-            if (finger.deltaPosition.y > 5.0f)
-            {
-                rigi.velocity = Vector3.zero;
-                rigi.velocity = Vector3.up * jump;
-            }
-            if (right == true)
-            {
-                transform.position = Vector3.Lerp(transform.position, go_right, 50);
-            }
-            if (left == true)
-            {
-                transform.position = Vector3.Lerp(transform.position, go_left, 50);
+
+                moveX = 0f;
             }
         }
     }
+
+    void FixedUpdate()
+    {
+        //Add a forward force.
+        rb.AddForce(0, 0, forwardForce * Time.deltaTime);
+
+        //Add a right force
+        rb.AddForce(sidewaysForce * moveX * Time.deltaTime, 0, 0, ForceMode.Force);
+
+        if (rb.position.y < -1f)
+        {
+            FindObjectOfType<GameManager>().EndGame();
+        }
+    }
+
+
+
+
+
+
 }
+
+
