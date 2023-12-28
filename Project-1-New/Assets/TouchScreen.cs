@@ -29,7 +29,7 @@ public class TouchScreen : MonoBehaviour
         if (Input.touchCount > 0)
         {
             Touch finger = Input.GetTouch(0);
-            //GetComponent<Touch>();
+           
             if(finger.deltaPosition.x > 5.0f)
             {
                 right = true;
